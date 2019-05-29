@@ -1,6 +1,6 @@
-/*
- ****************************  DEMONSTRATEUR TOBBY - Code principal        *****************************************
-*/
+
+//****************************  DEMONSTRATEUR TOBBY - Code principal        *****************************************
+
 
 //LIBRAIRIES********************************************************************************************************
 
@@ -28,11 +28,11 @@ const int Sens_Rotation_Moteur6162 = 1; //CONFIRME Attention au branchement, bro
 
 // Nombre de pas par moteur pour qu'ils se positionnent en position ready to go depuis le point de Homing
 const int Steps_ReadyToGo_Moteur1 = -1000; //CONFIRME - INJECTEUR
-const int Steps_ReadyToGo_Moteur2 = -26; // CONFIRME - ROULIS
-const int Steps_ReadyToGo_Moteur3 = 8; // CONFIRME - TANGUAGE
+const int Steps_ReadyToGo_Moteur2 = -198; // CONFIRME - ROULIS
+const int Steps_ReadyToGo_Moteur3 = 240; // CONFIRME - TANGUAGE
 const int Steps_ReadyToGo_Moteur4 = -120; //CONFIRME - PROFONDEUR
-const int Steps_ReadyToGo_Moteur5 = 160; //CONFIME - LARGEUR
-const int Steps_ReadyToGo_Moteur6162 = -300; //CONFIRME - HAUTEUR - 
+const int Steps_ReadyToGo_Moteur5 = 336; //CONFIME - LARGEUR
+const int Steps_ReadyToGo_Moteur6162 = -600; //CONFIRME - HAUTEUR - 
 
 //  Nombre de pas max par moteur depuis son point de Homing
 const int Steps_MaxFromHoming_Moteur1 = -10000; //TBD
@@ -43,12 +43,12 @@ const int Steps_MaxFromHoming_Moteur5 = 2500;//TBD
 const int Steps_MaxFromHoming_Moteur6162 = -1000; //CONFIRME
 
 //Valeurs de vitesse et d'accélération pour le setup
-       const int HomingSpeed[] = {500, 80, 60, 150, 150, 150}; // décalé pour faciliter la lecture
-const int HomingAcceleration[] = {500, 40, 40, 150, 150, 150};
+       const int HomingSpeed[] = {500, 130, 80, 150, 150, 150}; // décalé pour faciliter la lecture
+const int HomingAcceleration[] = {500, 130, 80, 150, 150, 150};
 
 //Valeurs de vitesse et d'accélération pour le vernissage
-       const int VernissageSpeed[] = {500, 80, 60, 150, 150, 150}; // décalé pour faciliter la lecture
-const int VernissageAcceleration[] = {500, 40, 40, 150, 150, 150};
+       const int VernissageSpeed[] = {500, 130, 80, 150, 150, 150}; // décalé pour faciliter la lecture
+const int VernissageAcceleration[] = {500, 130, 80, 150, 150, 150};
 
 //il faudrait idéalement être plsu lent pour le roulis et le tanguage
 
@@ -214,49 +214,6 @@ if (digitalRead(InjectionPin) == HIGH)
               {
                 Vernissage();
               }
-}
-*/
-
-//Vernissage();
-//lcd.clear();
-//lcd.print(Moteur4_Profondeur.currentPosition());
-//delay(5000);
-
-/*
-delay(1000);
-
-lcd.clear();
-lcd.print(Moteur2_Roulis.currentPosition());
-delay(5000);
-i=0;
-
-    Moteur1_Injecteur.setAcceleration(VernissageAcceleration[0]);
-    Moteur2_Roulis.setAcceleration(VernissageAcceleration[1]);
-    Moteur3_Tangage.setAcceleration(VernissageAcceleration[2]);
-    Moteur4_Profondeur.setAcceleration(VernissageAcceleration[3]);
-    Moteur5_Largeur.setAcceleration(VernissageAcceleration[4]);
-    Moteur6162_Hauteur.setAcceleration(VernissageAcceleration[5]);
-
-    Moteur1_Injecteur.setMaxSpeed(VernissageSpeed[0]);
-    Moteur2_Roulis.setMaxSpeed(VernissageSpeed[1]);
-    Moteur3_Tangage.setMaxSpeed(VernissageSpeed[2]);
-    Moteur4_Profondeur.setMaxSpeed(VernissageSpeed[3]);
-    Moteur5_Largeur.setMaxSpeed(VernissageSpeed[4]);
-    Moteur6162_Hauteur.setMaxSpeed(VernissageSpeed[5]);
-
-    
-    Moteur1_Injecteur.moveTo(StepsVernissage[i]);
-    Moteur2_Roulis.moveTo(StepsVernissage[i+1]);
-    Moteur3_Tangage.moveTo(StepsVernissage[i+2]);
-    Moteur4_Profondeur.moveTo(StepsVernissage[i+3]);
-    Moteur5_Largeur.moveTo(StepsVernissage[i+4]);
-    Moteur6162_Hauteur.moveTo(StepsVernissage[i+5]);
-    Moteur1_Injecteur.runToPosition();
-    Moteur2_Roulis.runToPosition();
-    Moteur3_Tangage.runToPosition();
-    Moteur4_Profondeur.runToPosition();
-    Moteur5_Largeur.runToPosition();
-    Moteur6162_Hauteur.runToPosition();
 }
 */
 

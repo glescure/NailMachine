@@ -3,13 +3,13 @@ void HomingAccel()
 digitalWrite (YellowLedPin, HIGH);
 lcd.clear();
 lcd.print("Init Hauteur");  
-HomingAccelCommon(Moteur6162_Hauteur,Sens_Rotation_Moteur6162,Switch_Home_Moteur6162,Steps_ReadyToGo_Moteur6162, HomingSpeed[5], VernissageSpeed[5], HomingAcceleration[5], VernissageAcceleration[5]);
+//HomingAccelCommon(Moteur6162_Hauteur,Sens_Rotation_Moteur6162,Switch_Home_Moteur6162,Steps_ReadyToGo_Moteur6162, HomingSpeed[5], VernissageSpeed[5], HomingAcceleration[5], VernissageAcceleration[5]);
 lcd.clear();
 lcd.print("Hauteur ok");
 delay(500);
 lcd.clear();
 lcd.print("Init Injecteur");
-HomingAccelCommon(Moteur1_Injecteur,Sens_Rotation_Moteur1,Switch_Home_Moteur1,Steps_ReadyToGo_Moteur1, HomingSpeed[0], VernissageSpeed[0], HomingAcceleration[0], VernissageAcceleration[0]);
+//HomingAccelCommon(Moteur1_Injecteur,Sens_Rotation_Moteur1,Switch_Home_Moteur1,Steps_ReadyToGo_Moteur1, HomingSpeed[0], VernissageSpeed[0], HomingAcceleration[0], VernissageAcceleration[0]);
 lcd.clear();
 lcd.print("Injecteur ok");
 delay(500);
